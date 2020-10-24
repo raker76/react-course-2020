@@ -6,20 +6,26 @@ export default function LoginPage(props) {
 
   function updateUserName(e) {
     const value = e.target.value;
-    setUser(u => Object.assign(u,{ name: value }));
+    setUser(u => Object.assign({}, u, { name: value }));
   }
 
   function updatePassword(e) {
     const value = e.target.value;
-    setUser((u) => Object.assign(u, { password: value }));
+    setUser((u) => Object.assign({}, u, { password: value }));
   }
 
   return (
-    <div>
-      <p>User name:</p>
-      <input type="text" value={user.name} onChange={updateUserName}></input>
-      <p>Password:</p>
-      <input type="text" value={user.password} onChange={updatePassword}></input>
-    </div>
+    <form>
+      <div>
+        <p>User name:</p>
+        <input type="text" value={user.name} onChange={updateUserName}></input>
+        <p>Password:</p>
+        <input
+          type="text"
+          value={user.password}
+          onChange={updatePassword}
+        ></input>
+      </div>
+    </form>
   );
 }

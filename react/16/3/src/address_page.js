@@ -6,12 +6,12 @@ export default function AddressPage(props) {
 
   function updateCountry(e) {
     const value = e.target.value;
-    setAddress((u) => Object.assign(u, { country: value }));
+    setAddress((u) => Object.assign({}, u, { country: value }));
   }
 
   function updateCity(e) {
     const value = e.target.value;
-    setAddress((u) => Object.assign(u, { city: value }));
+    setAddress((u) => Object.assign({}, u, { city: value }));
   }
 
   return (
