@@ -8,8 +8,8 @@ import SummaryPage from "./summary_page";
 
 const App = () => {
   const [page, setPage] = useState("login");
-  const [user, setUser] = useState({});
-  const [address, setAddress] = useState({});
+  const [user, setUser] = useState({name:'',password:''});
+  const [address, setAddress] = useState({country:'',city:''});
   
 
   function next() {
